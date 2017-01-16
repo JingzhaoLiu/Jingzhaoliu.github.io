@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="刘景照在 Github 上的个人博客">
+    <meta name="keyword" content="null">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
+    <link rel="alternate" type="application/atom+xml" title="Martin" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        class-3｜Martin&#39;s blog
+        
+    </title>
+
+    <link rel="canonical" href="http://Jingzhaoliu.github.io/2016/09/07/class-3/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('null')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    Martin
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+                        
+							
+                        <li>
+                            <a href="/Tags/">Tags</a>
+                        </li>
+							
+						
+                    
+                        
+							
+								
+							
+						
+                    
+					
+					
+						<li>
+							<a href="/about">About</a>
+						</li>
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img"
+     src="http://img1.imgtn.bdimg.com/it/u=154212521,2483087198&fm=23&gp=0.jpg">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('http://img1.imgtn.bdimg.com/it/u=154212521,2483087198&fm=23&gp=0.jpg')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>class-3</h1>
+                    
+                    <span class="meta">
+                         作者 Martin
+                        <span>
+                          日期 2016-09-07
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#知识框架"
+                           title="知识框架">知识框架</a>
+                        
+                        <a class="tag" href="/tags/#前端"
+                           title="前端">前端</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            class-3
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <p>把整个web前端开发所需要的知识都之中在一个视图中，形成一个完整的web前端知识体系，目的是想要颠覆人们对于前端只有三大块（html、css、js）的认识——做web前端需要的比这三大块要多得多。<br>1、分类</p>
+<p>所有知识框架，那肯定是一个结构型的展现，就是一棵树。web前端的知识点非常多，也非常散，需要好几层结构来组织这个体系，否则就会显得很乱。那么如何组织、把谁和谁放在一块儿？这是真正值得我们去思考的，你也可以自己来思考一下这个问题。<br>在我总结的这个知识框架中，首先第一层我划分为：理论知识，类库框架，编码开发，运行环境。</p>
+<p>接下来给大家解释一下：<br>这个图要从下往上看，为何？——因为下面是上面的基础；<br>首先，我们需要一定的理论知识，不管是你听别人讲授、自己看书还是网上淘资料，你都需要一定的理论知识，每一种程序开发，都避免不了。<br>第二，有了这些理论知识我们就可以编码了——不错——but，没有人能抵挡住第三方框架和类库的诱惑，例如jquery；<br>第三，有了这些理论知识和协助我们的类库框架，我们就可真正的编码了。大家可能以为编码开发不就是写代码吗，还有啥？——这里面道道多着呢；<br>最后，开发程序的目的，最终是为了能高效、稳定的运行在相应的环境中，这其中又有哪些事情需要我们去做？请期待；</p>
+<ol>
+<li>理论知识 包括“软知识”和“硬知识”</li>
+</ol>
+<p>“软知识”和“硬知识”大家可能觉得词陌生，其实我一说大家就能明白。</p>
+<p>所谓“软”的就是能在各个程序开发中都用到的，算是基本功、内功，例如数据结构、算法、设计模式、面向对象等等；<br>所谓“硬”的就是能直接用于本程序开发的。用C语言你就得学C语言语法，此时学java没用。我们web前端开发所需要的硬知识其实都包含在三个标准里面：<br>http标准、W3C标准和ECMAs cript标准<br>；</p>
+<ol>
+<li>聊一聊web前端开发中的“硬知识”</li>
+</ol>
+<p>“软知识”的内容非常多，也是我们大学时代学习的重点（没学好是另回事儿，毕业再恶补）。我们本次主要讨论的是web前端这一个方向，因此就点到为止，让大家知道这些知识也在知识体系中扮演重要角色。<br>刚才说道，硬知识有三个标准：http标准、W3C标准和ECMAs cript标准，那咱们就挨个聊聊这三个标准。<br>3.1 http标准</p>
+<p>为什么做web前端要了解http标准？——因为浏览器要从服务端获取网页，网页也可能将信息再提交给服务器，这其中都有http的连接。web系统既然和http链接有瓜葛，你就必须去了解它。</p>
+<p>我的意见是：你不必去非常了解http的详细内容，但是你要了解web前端开发常用的一些http的知识——就是上图中我列出来的那些。当然，我知识列了一个纲，详细内容还得靠你自己去查阅（本文章讲的是知识框架，不会涉及任何知识点的详细内容）<br>关于这方面的知识，建议去查阅《图解http》这本书，浅显易懂的讲述了这些内容，我曾经也看过。<br>3.2 W3C标准</p>
+<p>如果说你只知道web前端的一个标准，估计肯定是W3C标准了（据我了解，貌似大部分人真的都只知道这一个标准）。它的内容非常多，看看www.w3.org/TR/和网页链接这个页面。<br>写到这里让我想起了一句话：2/8原则——20%的功能满足80%的需求。我觉得这句话用到这里非常合适，我们在平时开发过程中根本用不到这么多东西。反而，你要把平时用的多的东西搞懂了。<br>下图的这些知识，我想不用再过多解释了，这就是我文章开发说的“三大块”（html、css、js）。现在你要知道，它们只不多是W3C标准的一部分，而W3C标准也只是web前端开发知识体系中的一部分而已。</p>
+<p>3.3 ECMAs cript</p>
+<p>简称ES，写全称太麻烦了。<br>有些人可能只知道javas cript，而不知道ES——其实，js是在ES的基础上，为web浏览器做了一部分封装（增加了DOM操作、BOM操作等）。</p>
+<p>如上图中的这些概念，大家可能平时都在javas cript中看到，其实他们是ES的内容。只不过javas cript继承了ES的这些特性，并且javas cript用的比较广泛，因此才会在js中讨论的多一些。<br>还是那个“2/8原则”。其实ES中的内容也非常多，而且更新很快，现在都到ES6了。但是我上图中列出来的这些都是最重要的概念。如果你不懂原型、闭包和作用域，那就说明你还不完全了解ES，也就是不完全会用javas cript。</p>
+<ol>
+<li>框架和类库</li>
+</ol>
+<p>前面已经描述完了web前端开发所需要的理论知识。如何实践呢？——不能蛮干——还得绕世界去看看，有哪些大牛已经为我们做出了如此多的贡献。<br>用下面的这些类库或者框架，能大大提高你的开发效率。</p>
+<p>首先，jquery一定是大部分web前端开发者不可或缺的工具。而我利用jquery不仅仅停留在只使用它的API和插件上，我还会自己去写jquery插件，我还会去读jquery的源码、了解jquery的设计思路。如果你也能那样做，请相信我，你会收获到意想不到的效果。<br>如果有一个问题：怎样才能最最透彻的理解javas cript的事件系统？最佳答案之一：读几遍（一遍可能读不懂）jquery关于事件处理部分的源码！<br>bootstrap不用再过多解释了吧，从github上的排名也能看出道道来。甚至连我们公司的UI设计师，都从bootstrap上截图作为素材。<br>fontAwesome是全世界最强大的图标系统。相比于css制作图标来说，这个要好很多倍，不管是开发、效率还是维护上。icomoon.io能让我自定义选择自己的图标文件。<br>requirejs和seajs这种模块定义系统，也一定是你系统中不可或缺的。我曾经看过一个教程，讲师就说：requirejs带来了既jquery之后的第二次前端技术变革。<br>其他的，backbone、angular、react这些也慢慢的开始发挥了他们的价值，此处精力有限就不再赘述了——但是，他们很重要——你至少要试着去了解它们。</p>
+<ol>
+<li>编码开发</li>
+</ol>
+<p>要问编码IDE哪家强，当然要属微软的visual studio！但是即便是微软的VS最新版本，它也代替不了下面要说的这套开发环境。</p>
+<p>如果你专门做web前端，就不要在用vs了，当然要选择sublime。写html语句还用手动一条一条写吗？你得需要zencoding的协助，否则效率太差了。<br>另外，针对html、css、js的压缩、合并、语法检查，文件的清除、复制这些操作，你还要手动去做吗？——你需要grunt或者gulp的帮助。<br>如果你的系统中有比较多的js代码或者文件，请选择一个合适的模块定义规范——CMD / AMD<br>请用git来帮助你做文件版本管理，最简单的就是使用github。<br>调试、测试，也都有专门的工具，都是需要学的……<br>——我的天哪……这些字写到现在写的我的手都酸了，别说要学习这些知识了——再也别说我们web前端是“三大块”了！</p>
+<ol>
+<li>运行环境</li>
+</ol>
+<p>当系统真正到了运行环境中，当你觉得终于完事儿的时候，其实还有好几个知识点需要你掌握。看下图：</p>
+<p>首先，你要知道web系统虽然大部分是在浏览器下运行，但是js可能会被运行在node环境。</p>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2016/09/07/class-4/" data-toggle="tooltip" data-placement="top"
+                           title="class-4">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2016/09/07/class-1/" data-toggle="tooltip" data-placement="top"
+                           title="class-1">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#知识框架"
+                           title="知识框架">知识框架</a>
+                        
+                        <a class="tag" href="/tags/#前端"
+                           title="前端">前端</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Martin 2017
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://Jingzhaoliu.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','null','2.0.0');
+</script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="null">
+</body>
+
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="刘景照在 Github 上的个人博客">
+    <meta name="keyword" content="null">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
+    <link rel="alternate" type="application/atom+xml" title="Martin" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        class-9｜Martin&#39;s blog
+        
+    </title>
+
+    <link rel="canonical" href="http://Jingzhaoliu.github.io/2016/09/07/class-9/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('null')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    Martin
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+                        
+							
+                        <li>
+                            <a href="/Tags/">Tags</a>
+                        </li>
+							
+						
+                    
+                        
+							
+								
+							
+						
+                    
+					
+					
+						<li>
+							<a href="/about">About</a>
+						</li>
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img"
+     src="http://img1.imgtn.bdimg.com/it/u=154212521,2483087198&fm=23&gp=0.jpg">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('http://img1.imgtn.bdimg.com/it/u=154212521,2483087198&fm=23&gp=0.jpg')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>class-9</h1>
+                    
+                    <span class="meta">
+                         作者 Martin
+                        <span>
+                          日期 2016-09-07
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            class-9
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <p>Grunt靠边，全新的建构工具来了。Gulp的code-over-configuration不只让撰写任务(tasks)更加容易，也更好阅读及维护。<br>Glup使用node.js串流(streams)让建构更快速，不须写出资料到硬盘的暂存档案/目录。如果你想了解更多有关串流–虽然不是必须的–你可以阅读这篇文章。Gulp利用来源档案当作输入，串流到一群外挂(plugins)，最后取得输出的结果，并非配置每一个外挂的输入与输出–就像Grunt。让我们来看个范例，分别在Gulp及Grunt建构Sass：<br>Grunt:<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>sass: {<br>  dist: {<br>    options: {<br>      style: ‘expanded’<br>    },<br>    files: {<br>      ‘dist/assets/css/main.css’: ‘src/styles/main.scss’,<br>    }<br>  }<br>},</p>
+<p>autoprefixer: {<br>  dist: {<br>    options: {<br>      browsers: [<br>        ‘last 2 version’, ‘safari 5’, ‘ie 8’, ‘ie 9’, ‘opera 12.1’, ‘ios 6’, ‘android 4’<br>      ]<br>    },<br>    src: ‘dist/assets/css/main.css’,<br>    dest: ‘dist/assets/css/main.css’<br>  }<br>},</p>
+<p>grunt.registerTask(‘styles’, [‘sass’, ‘autoprefixer’]);<br>Grunt需要各别配置外挂，指定其来源与目的路径。例如，我们将一个档案作为外挂Sass的输入，并储存输出结果。在设置Autoprefixer时，需要将Sass的输出结果作为输入，产生出一个新档案。来看看在Gulp中同样的配置：<br>Gulp:<br>1<br>2<br>3<br>4<br>5<br>6<br>gulp.task(‘sass’, function() {<br>  returngulp.src(‘src/styles/main.scss’)<br>    .pipe(sass({ style: ‘compressed’}))<br>    .pipe(autoprefixer(‘last 2 version’, ‘safari 5’, ‘ie 8’, ‘ie 9’, ‘opera 12.1’, ‘ios 6’, ‘android 4’))<br>    .pipe(gulp.dest(‘dist/assets/css’))<br>});<br>在Gulp中我们只需要输入一个档案即可。经过外挂Sass处理，再传到外挂Autoprefixer，最终取得一个档案。这样的流程加快建构过程，省去读取及写出不必要的档案，只需要最终的一个档案。<br>让我们开始安装gulp并建立一个基本的gulpfile，包含几个核心任务来作为入门吧。<br>安装gulp<br>深入设置任务之前，需先安装gulp：<br>1<br>$ npm install gulp -g</p>
+<p>这会将gulp安装到全域环境下，让你可以存取gulp的CLI。接著，需要在本地端的专案进行安装。cd到你的专案根目录，执行下列指令(请先确定你有package.json档案, 没有的话执行npm init)：<br>1<br>$ npm install gulp –save-dev<br>上述指令将gulp安装到本地端的专案内，并纪录于package.json内的devDependencies物件。<br>安装gulp外挂<br>接著安装一些外挂，完成下列任务：<br>编译Sass (gulp-ruby-sass)<br>Autoprefixer (gulp-autoprefixer)<br>缩小化(minify)CSS (gulp-minify-css)<br>JSHint (gulp-jshint)<br>拼接 (gulp-concat)<br>丑化(Uglify) (gulp-uglify)<br>图片压缩 (gulp-imagemin)<br>即时重整(LiveReload) (gulp-livereload)<br>清理档案 (gulp-clean)<br>图片快取，只有更改过得图片会进行压缩 (gulp-cache)<br>更动通知 (gulp-notify)<br>删除文件 (del)<br>执行下列指令来安装这些外挂:<br>1<br>$ npm install gulp-ruby-sass gulp-autoprefixer gulp-minify-css gulp-jshint gulp-concat gulp-uglify gulp-imagemin gulp-rimraf gulp-notify gulp-rename gulp-livereload gulp-cache del –save-dev<br>指令将会安装必要的外挂，并纪录于package.json内的devDependencies物件。完整的gulp外挂清单可以在这裡找到。<br>载入外挂<br>接下来，我们需要建立一个gulpfile.js档案，并且载入这些外挂：<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>var gulp = require(‘gulp’),<br>    sass = require(‘gulp-ruby-sass’),<br>    autoprefixer = require(‘gulp-autoprefixer’),<br>    minifycss = require(‘gulp-minify-css’),<br>    jshint = require(‘gulp-jshint’),<br>    uglify = require(‘gulp-uglify’),<br>    imagemin = require(‘gulp-imagemin’),<br>    rename = require(‘gulp-rename’),<br>    clean = require(‘gulp-rimraf’),<br>    concat = require(‘gulp-concat’),<br>    notify = require(‘gulp-notify’),<br>    cache = require(‘gulp-cache’),<br>    livereload = require(‘gulp-livereload’),<br>    del = require(‘del’);</p>
+<p>看起来比Grunt有更多的事要做，Gulp外挂跟Grunt外挂有些许差异–它被设计成做一件事并且做好一件事。例如；Grunt的 imagemin利用快取来避免重複压缩已经压缩好的图片。在Gulp中，这必须透过一个快取外挂来达成，当然，快取外挂也可以拿来快取其他东西。这让建 构过程中增加了额外的弹性层面。<br>我们也可以像Grunt一样自动载入所有已安装的外挂，但这不在此文章目的，所以我们将维持在手动的方式。<br>建立任务</p>
+<ol>
+<li>编译Sass, Autoprefix 和 minify<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>gulp.task(‘styles’, function() {<br>return gulp.src(‘src/styles/main.scss’)<br> .pipe(sass({ style: ‘expanded’}))<br> .pipe(autoprefixer(‘last 2 version’, ‘safari 5’, ‘ie 8’, ‘ie 9’, ‘opera 12.1’, ‘ios 6’, ‘android 4’))<br> .pipe(gulp.dest(‘dist/assets/css’))<br> .pipe(rename({suffix: ‘.min’}))<br> .pipe(minifycss())<br> .pipe(gulp.dest(‘dist/assets/css’))<br> .pipe(notify({ message: ‘Styles task complete’}));<br>});</li>
+</ol>
+<p>首先我们先配置 Sass 编译。使用 expanded 方式处理Sass文件，通过 Autoprefixer 处理前缀，保存至目标路径，接着给文件增加 .min 后缀，然后使用 minifycss 压缩，最后在结束的时候发出完成通知。<br>其中 gulp.src API 可以使用正则匹配多个文件，例如 /<em>*/</em>.scss 返回所有的scss文件。</p>
+<p>1<br>gulp.task(‘styles’, function() { … )};<br>这个gulp.taskAPI用来建立任务。可以透过终端机输入$ gulp styles指令来执行上述任务。<br>1<br>return gulp.src(‘src/styles/main.scss’)<br>这个gulp.srcAPI用来定义一个或多个来源档案。允许使用glob样式，例如/<em>*/</em>.scss比对多个符合的档案。传回的串流(stream)让它成为非同步机制，所以在我们收到完成通知之前，确保该任务已经全部完成。<br>1<br>.pipe(sass({ style: ‘expanded’}))<br>使用pipe()来串流来源档案到某个外挂。外挂的选项通常在它们各自的Github页面中可以找到。上面列表中我有留下各个外挂的连结，让你方便使用。<br>1<br>.pipe(gulp.dest(‘dist/assets/css’));<br>这个gulp.dest()API是用来设定目的路径。一个任务可以有多个目的地，一个用来输出扩展的版本，一个用来输出缩小化的版本。这个在上述的styles任务中已经有展示。<br>我建议阅读gulp的API文件，以了解这些函式方法。</p>
+<ol>
+<li><p>使用 JSHint, concat 和 minify 处理 JavaScript<br>希望你现在对于如何建立一个新的gulp任务有好想法。接下来，我们将设定脚本任务，包括lint、拼接及丑化:<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>gulp.task(‘scripts’, function() {<br>returngulp.src(‘src/scripts/<em>*/</em>.js’)<br> .pipe(jshint(‘.jshintrc’))<br> .pipe(jshint.reporter(‘default’))<br> .pipe(concat(‘main.js’))<br> .pipe(gulp.dest(‘dist/assets/js’))<br> .pipe(rename({suffix: ‘.min’}))<br> .pipe(uglify())<br> .pipe(gulp.dest(‘dist/assets/js’))<br> .pipe(notify({ message: ‘Scripts task complete’}));<br>});<br>需要注意的一点是，我们需要给 JSHint 指定一个 reporter，我一般使用默认的 reporter，这比较适合大多数人，你可以从JSHint官网了解更多。</p>
+<ol>
+<li>压缩图片<br>接下来我们开始编写图片压缩模块：<br>1<br>2<br>3<br>4<br>5<br>6<br>gulp.task(‘images’, function() {<br>returngulp.src(‘src/images/<em>*/</em>‘)<br>.pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true}))<br>.pipe(gulp.dest(‘dist/assets/img’))<br>.pipe(notify({ message: ‘Images task complete’}));<br>});<br>这会将对所有来源图片进行imagemin处理。我们可以稍微更进一步，利用快取保存已经压缩过的图片，以便每次进行此任务时不需要再重新压缩。这裡只需要gulp-cache外挂–稍早已经安装。我们需要额外设置才能使用这个外挂，因此修改这段程式码:<br>1<br>.pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true}))<br>成为这段:<br>1<br>.pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true})))<br>现在只有新的或更动的图片会被压缩。</li>
+</ol>
+</li>
+</ol>
+<p>清除目标文件<br>在部署之前先清除一下目标文件是个很好的习惯：以防任何已经被删除的来源档案遗留在目的地目录之中:<br>1<br>2<br>3<br>4<br>gulp.task(‘clean’, function() {<br>  return gulp.src([‘dist/assets/css’, ‘dist/assets/js’, ‘dist/assets/img’], {read: false})<br>    .pipe(clean());<br>});<br>我们可以传入一个目录(或档案)阵列到gulp.src。因为我们不想要读取已经被删除的档案，我们可以加入read: false选项来防止gulp读取档案内容–让它快一些。</p>
+<p>编写默认任务<br>我们可以建立一个预设任务，当只输入$ gulp指令时执行的任务，这裡执行三个我们所建立的任务:<br>1<br>2<br>3<br>gulp.task(‘default’, [‘clean’], function() {<br>    gulp.start(‘styles’, ‘scripts’, ‘images’);<br>});<br>注意额外传入gulp.task的阵列。这裡我们可以定义任务相依(task dependencies)。在这个范例中，gulp.start开始任务前会先执行清理(clean)任务。Gulp中所有的任务都是并行(concurrently)执行，并没有先后顺序哪个任务会先完成，所以我们需要确保clean任务在其他任务开始前完成。<br>注意: 透过相依任务阵列来执行clean而非gulp.start是经过考虑的，在这个情境来看是最好的选择，以确保清理任务全部完成。</p>
+<p>Watch 和 LiveReload<br>我们可以使用 Watch 来监听指定文件和 LiveReload 设置实现自动刷新。<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>gulp.task(‘watch’, function() {</p>
+<p>  // 看守所有.scss档<br>  gulp.watch(‘src/styles/<em>*/</em>.scss’, [‘styles’]);</p>
+<p>  // 看守所有.js档<br>  gulp.watch(‘src/scripts/<em>*/</em>.js’, [‘scripts’]);</p>
+<p>  // 看守所有图片档<br>  gulp.watch(‘src/images/<em>*/</em>‘, [‘images’]);</p>
+<p>});<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>gulp.task(‘watch’, function() {</p>
+<p>  // 建立即时重整伺服器<br>  varserver = livereload();</p>
+<p>  // 看守所有位在 dist/  目录下的档案，一旦有更动，便进行重整<br>  gulp.watch([‘dist/**’]).on(‘change’, function(file) {<br>    server.changed(file.path);<br>  });</p>
+<p>});<br>为了让这个功能有效，还需要安装并启用LiveReload的浏览器外挂。或者你也可以手动加上这个片段程式码。<br>整合所有任务<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>64<br>65<br>66<br>67<br>68<br>69<br>70<br>71<br>72<br>73<br>74<br>75<br>76<br>77<br>78<br>79<br>80<br>// 载入外挂<br>var gulp = require(‘gulp’),<br>    sass = require(‘gulp-ruby-sass’),<br>    autoprefixer = require(‘gulp-autoprefixer’),<br>    minifycss = require(‘gulp-minify-css’),<br>    jshint = require(‘gulp-jshint’),<br>    uglify = require(‘gulp-uglify’),<br>    imagemin = require(‘gulp-imagemin’),<br>    rename = require(‘gulp-rename’),<br>    clean = require(‘gulp-clean’),<br>    concat = require(‘gulp-concat’),<br>    notify = require(‘gulp-notify’),<br>    cache = require(‘gulp-cache’),<br>    livereload = require(‘gulp-livereload’),<br>    del = require(‘del’);</p>
+<p>// 样式<br>gulp.task(‘styles’, function() {<br>  return gulp.src(‘src/styles/main.scss’)<br>    .pipe(sass({ style: ‘expanded’, }))<br>    .pipe(autoprefixer(‘last 2 version’, ‘safari 5’, ‘ie 8’, ‘ie 9’, ‘opera 12.1’, ‘ios 6’, ‘android 4’))<br>    .pipe(gulp.dest(‘dist/styles’))<br>    .pipe(rename({ suffix: ‘.min’}))<br>    .pipe(minifycss())<br>    .pipe(gulp.dest(‘dist/styles’))<br>    .pipe(notify({ message: ‘Styles task complete’}));<br>});</p>
+<p>// 脚本<br>gulp.task(‘scripts’, function() {<br>  return gulp.src(‘src/scripts/<em>*/</em>.js’)<br>    .pipe(jshint(‘.jshintrc’))<br>    .pipe(jshint.reporter(‘default’))<br>    .pipe(concat(‘main.js’))<br>    .pipe(gulp.dest(‘dist/scripts’))<br>    .pipe(rename({ suffix: ‘.min’}))<br>    .pipe(uglify())<br>    .pipe(gulp.dest(‘dist/scripts’))<br>    .pipe(notify({ message: ‘Scripts task complete’}));<br>});</p>
+<p>// 图片<br>gulp.task(‘images’, function() {<br>  return gulp.src(‘src/images/<em>*/</em>‘)<br>    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true})))<br>    .pipe(gulp.dest(‘dist/images’))<br>    .pipe(notify({ message: ‘Images task complete’}));<br>});</p>
+<p>// 清理<br>gulp.task(‘clean’, function() {<br>  return gulp.src([‘dist/styles’, ‘dist/scripts’, ‘dist/images’], {read: false})<br>    .pipe(clean());<br>});</p>
+<p>// 默认任务<br>gulp.task(‘default’, [‘clean’], function() {<br>    gulp.start(‘styles’, ‘scripts’, ‘images’);<br>});</p>
+<p>// 看守<br>gulp.task(‘watch’, function() {</p>
+<p>  // 看守所有.scss档<br>  gulp.watch(‘src/styles/<em>*/</em>.scss’, [‘styles’]);</p>
+<p>  // 看守所有.js档<br>  gulp.watch(‘src/scripts/<em>*/</em>.js’, [‘scripts’]);</p>
+<p>  // 看守所有图片档<br>  gulp.watch(‘src/images/<em>*/</em>‘, [‘images’]);</p>
+<p>  // 建立即时重整伺服器<br>  var server = livereload();</p>
+<p>  // 看守所有位在 dist/  目录下的档案，一旦有更动，便进行重整<br>  gulp.watch([‘dist/**’]).on(‘change’, function(file) {<br>    server.changed(file.path);<br>  });</p>
+<p>});</p>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2016/09/07/class-10/" data-toggle="tooltip" data-placement="top"
+                           title="class-10">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2016/09/07/class-8/" data-toggle="tooltip" data-placement="top"
+                           title="class-8">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Martin 2017
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://Jingzhaoliu.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','null','2.0.0');
+</script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="null">
+</body>
+
+</html>

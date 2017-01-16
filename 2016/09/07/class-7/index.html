@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="刘景照在 Github 上的个人博客">
+    <meta name="keyword" content="null">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
+    <link rel="alternate" type="application/atom+xml" title="Martin" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        class-7｜Martin&#39;s blog
+        
+    </title>
+
+    <link rel="canonical" href="http://Jingzhaoliu.github.io/2016/09/07/class-7/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('null')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    Martin
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+                        
+							
+                        <li>
+                            <a href="/Tags/">Tags</a>
+                        </li>
+							
+						
+                    
+                        
+							
+								
+							
+						
+                    
+					
+					
+						<li>
+							<a href="/about">About</a>
+						</li>
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img"
+     src="http://img1.imgtn.bdimg.com/it/u=154212521,2483087198&fm=23&gp=0.jpg">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('http://img1.imgtn.bdimg.com/it/u=154212521,2483087198&fm=23&gp=0.jpg')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>class-7</h1>
+                    
+                    <span class="meta">
+                         作者 Martin
+                        <span>
+                          日期 2016-09-07
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            class-7
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <p>C = Control<br> M = Meta = Alt | Esc<br> Del = Backspace</p>
+<p> 基本快捷键(Basic)<br> C-x C-f “find”文件, 即在缓冲区打开/新建一个文件<br> C-x C-s 保存文件<br> C-x C-w 使用其他文件名另存为文件<br> C-x C-v 关闭当前缓冲区文件并打开新文件<br> C-x i 在当前光标处插入文件<br> C-x b 新建/切换缓冲区<br> C-x C-b 显示缓冲区列表<br> C-x k 关闭当前缓冲区<br> C-z 挂起emacs<br> C-x C-c 关闭emacs</p>
+<p> 光标移动基本快捷键(Basic Movement)<br> C-f 后一个字符<br> C-b 前一个字符<br> C-p 上一行<br> C-n 下一行<br> M-f 后一个单词<br> M-b 前一个单词<br> C-a 行首<br> C-e 行尾<br> C-v 向下翻一页<br> M-v 向上翻一页<br> M-&lt; 到文件开头<br> M-&gt; 到文件末尾</p>
+<p> 编辑(Editint)<br> M-n 重复执行后一个命令n次<br> C-u 重复执行后一个命令4次<br> C-u n 重复执行后一个命令n次<br> C-d 删除(delete)后一个字符<br> M-d 删除后一个单词<br> Del 删除前一个字符<br> M-Del 删除前一个单词<br> C-k 移除(kill)一行</p>
+<p> C-Space 设置开始标记 (例如标记区域)<br> C-@ 功能同上, 用于C-Space被操作系统拦截的情况<br> C-w 移除(kill)标记区域的内容<br> M-w 复制标记区域的内容<br> C-y 召回(yank)复制/移除的区域/行<br> M-y 召回更早的内容 (在kill缓冲区内循环)<br> C-x C-x 交换光标和标记</p>
+<p> C-t 交换两个字符的位置<br> M-t 交换两个单词的位置<br> C-x C-t 交换两行的位置<br> M-u 使从光标位置到单词结尾处的字母变成大写<br> M-l 与M-u相反<br> M-c 使从光标位置开始的单词的首字母变为大写</p>
+<p> 重要快捷键(Important)<br> C-g 停止当前运行/输入的命令<br> C-x u 撤销前一个命令<br> M-x revert-buffer RETURN (照着这个输入)撤销上次存盘后所有改动<br> M-x recover-file RETURN 从自动存盘文件恢复<br> M-x recover-session RETURN 如果你编辑了几个文件, 用这个恢复</p>
+<p> 在线帮助(Online-Help)<br> C-h c 显示快捷键绑定的命令<br> C-h k 显示快捷键绑定的命令和它的作用<br> C-h l 显示最后100个键入的内容<br> C-h w 显示命令被绑定到哪些快捷键上<br> C-h f 显示函数的功能<br> C-h v 显示变量的含义和值<br> C-h b 显示当前缓冲区所有可用的快捷键<br> C-h t 打开emacs教程<br> C-h i 打开info阅读器<br> C-h C-f 显示emacs FAQ<br> C-h p 显示本机Elisp包的信息</p>
+<p> 搜索/替换(Seach/Replace)<br> C-s 向后搜索<br> C-r 向前搜索<br> C-g 回到搜索开始前的位置(如果你仍然在搜索模式中)<br> M-% 询问并替换(query replace)</p>
+<p> Space或y 替换当前匹配<br> Del或n 不要替换当前匹配<br> . 仅仅替换当前匹配并退出(替换)<br> , 替换并暂停(按Space或y继续)<br> ! 替换以下所有匹配<br> ^ 回到上一个匹配位置<br> RETURN或q 退出替换</p>
+<p> 使用正则表达式(Regular expression)搜索/替换<br> 可在正则表达式中使用的符号:<br> ^ 行首<br> $ 行尾<br> . 单个字符<br> .* 任意多个(包括没有)字符<br> \&lt; 单词开头<br> > 单词结尾<br> [] 括号中的任意一个字符(例如[a-z]表示所有的小写字母)</p>
+<p> M C-s RETURN 使用正则表达式向后搜索<br> M C-r RETURN 使用正则表达式向前搜索<br> C-s 增量搜索<br> C-s 重复增量搜索<br> C-r 向前增量搜索<br> C-r 重复向前增量搜索<br> M-x query-replace-regexp 使用正则表达式搜索并替换</p>
+<p> 窗口命令(Window Commands)<br> C-x 2 水平分割窗格<br> C-x 3 垂直分割窗格<br> C-x o 切换至其他窗格<br> C-x 0 关闭窗格<br> C-x 1 关闭除了光标所在窗格外所有窗格<br> C-x ^ 扩大窗格<br> M-x shrink-window 缩小窗格<br> M C-v 滚动其他窗格内容<br> C-x 4 f 在其他窗格中打开文件<br> C-x 4 0 关闭当前缓冲区和窗格<br> C-x 5 2 新建窗口(frame)<br> C-x 5 f 在新窗口中打开文件<br> C-x 5 o 切换至其他窗口<br> C-x 5 0 关闭当前窗口</p>
+<p> 书签命令(Bookmark commands)<br> C-x r m 在光标当前位置创建书签<br> C-x r b 转到书签<br> M-x bookmark-rename 重命名书签<br> M-x bookmark-delete 删除书签<br> M-x bookmark-save 保存书签<br> C-x r l 列出书签清单</p>
+<p> d 标记等待删除<br> Del 取消删除标记<br> x 删除被标记的书签<br> r 重命名<br> s 保存列表内所有书签<br> f 转到当前书签指向的位置<br> m 标记在多窗口中打开<br> v 显示被标记的书签(或者光标当前位置的书签)<br> t 切换是否显示路径列表<br> w 显示当前文件路径<br> q 退出书签列表</p>
+<p> M-x bookmark-write 将所有书签导出至指定文件<br> M-x bookmark-load 从指定文件导入书签</p>
+<p> Shell<br> M-x shell 打开shell模式<br> C-c C-c 类似unix里的C-c(停止正在运行的程序)<br> C-d 删除光标后一个字符<br> C-c C-d 发送EOF<br> C-c C-z 挂起程序(unix下的C-z)<br> M-p 显示前一条命令<br> M-n 显示后一条命令</p>
+<p> DIRectory EDitor (dired)<br> C-x d 打开dired<br> C(大写C) 复制<br> d 标记等待删除<br> D 立即删除<br> e或f 打开文件或目录<br> g 刷新当前目录<br> G 改变文件所属组(chgrp)<br> k 从屏幕上的列表里删除一行(不是真的删除)<br> m 用*标记<br> n 光标移动到下一行<br> o 在另一个窗格打开文件并移动光标<br> C-o 在另一个窗格打开文件但不移动光标<br> P 打印文件<br> q 退出dired<br> Q 在标记的文件中替换<br> R 重命名文件<br> u 移除标记<br> v 显示文件内容<br> x 删除有D标记的文件<br> Z 压缩/解压缩文件<br> M-Del 移除标记(默认为所有类型的标记)<br> ~ 标记备份文件(文件名有~的文件)等待删除</p>
+<h1 id="标记自动保存文件-文件名形如-name-等待删除"><a href="#标记自动保存文件-文件名形如-name-等待删除" class="headerlink" title="标记自动保存文件(文件名形如#name#)等待删除"></a>标记自动保存文件(文件名形如#name#)等待删除</h1><p> <em>/ 用</em>标记所有文件夹(用C-u <em>/n移除标记)<br> = 将当前文件和标记文件(使用C-@标记而不是dired的m标记)比较<br> M-= 将当前文件和它的备份比较<br> ! 对当前文件应用shell命令<br> M-} 移动光标至下一个用</em>或D标记的文件<br> M-{ 移动光标至上一个用<em>或D标记的文件<br> % d 使用正则表达式标记文件等待删除<br> % m 使用正则表达式标记文件为</em></p>
+<ul>
+<li><p>新建文件夹</p>
+<blockquote>
+<p>移动光标至后一个文件夹<br>&lt; 移动光标至前一个文件夹<br>s 切换排序模式(按文件名/日期)</p>
+</blockquote>
+<p>或许把这个命令归入这一类也很合适:<br>M-x speedbar 打开一个独立的目录显示窗口</p>
+<p>Telnet<br>M-x telnet 打开telnet模式<br>C-d 删除后一个字符或发送EOF<br>C-c C-c 停止正在运行的程序(和unix下的C-c类似)<br>C-c C-d 发送EOF<br>C-c C-o 清除最后一个命令的输出<br>C-c C-z 挂起正在运行的命令<br>C-c C-u 移除前一行<br>M-p 显示前一条命令</p>
+<p>Text<br>只能在text模式里使用<br>M-s 使当前行居中<br>M-S 使当前段落居中<br>M-x center-region 使被选中的区域居中</p>
+<p>宏命令(Macro-commands)<br>C-x ( 开始定义宏<br>C-x ) 结束定义宏<br>C-x e 运行最近定义的宏<br>M-n C-x e 运行最近定义的宏n次<br>M-x name-last-kbd-macro 给最近定义的宏命名(用来保存)<br>M-x insert-kbd-macro 将已命名的宏保存到文件<br>M-x load-file 载入宏</p>
+<p>编程(Programming)<br>M C-\ 自动缩进光标和标记间的区域<br>M-m 移动光标到行首第一个(非空格)字符<br>M-^ 将当前行接到上一行末尾处<br>M-; 添加缩进并格式化的注释<br>C, C++和Java模式<br>M-a 移动光标到声明的开始处<br>M-e 移动光标到声明的结尾处<br>M C-a 移动光标到函数的开始处<br>M C-e 移动光标到函数的结尾处<br>C-c RETURN 将光标移动到函数的开始处并标记到结尾处<br>C-c C-q 根据缩进风格缩进整个函数<br>C-c C-a 切换自动换行功能<br>C-c C-d 一次性删除光标后的一串空格(greedy delete)</p>
+<p>为了实现下面的一些技术, 你需要在保存源代码的目录里运行”etags<br><em>.c </em>.h *.cpp”(或者源代码的其他的扩展名)<br>M-.(点) 搜索标签<br>M-x tags-search ENTER 在所有标签里搜索(使用正则表达式)<br>M-,(逗号) 在tags-search里跳至下一个匹配处<br>M-x tags-query-replace 在设置过标签的所有文件里替换文本</p>
+<p>GDB(调试器)<br>M-x gdb 在另一个的窗格中打开gdb</p>
+<p>版本控制(Version Control)<br>C-x v d 显示当前目录下所有注册过的文件(show all registered files in this dir)<br>C-x v = 比较不同版本间的差异(show diff between versions)<br>C-x v u 移除上次提交之后的更改(remove all changes since last checkin)<br>C-x v ~ 在不同窗格中显示某个版本(show certain version in different window)<br>C-x v l 打印日志(print log)<br>C-x v i 标记文件等待添加版本控制(mark file for version control add)<br>C-x v h 给文件添加版本控制文件头(insert version control header into file)<br>C-x v r 获取命名过的快照(check out named snapshot)<br>C-x v s 创建命名的快照(create named snapshot)<br>C-x v a 创建gnu风格的更改日志(create changelog file in gnu-style)</p>
+</li>
+</ul>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2016/09/07/class-8/" data-toggle="tooltip" data-placement="top"
+                           title="class-8">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2016/09/07/class-6/" data-toggle="tooltip" data-placement="top"
+                           title="Atom 编辑器快捷键列表汇总整理">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#标记自动保存文件-文件名形如-name-等待删除"><span class="toc-text">标记自动保存文件(文件名形如#name#)等待删除</span></a></li></ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Martin 2017
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://Jingzhaoliu.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','null','2.0.0');
+</script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="null">
+</body>
+
+</html>
