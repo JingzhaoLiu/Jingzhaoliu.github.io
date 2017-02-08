@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="刘景照在 Github 上的个人博客">
+    <meta name="keyword" content="学习,成长">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="http://img2.imgtn.bdimg.com/it/u=877666951,3769873751&fm=23&gp=0.jpg">
+    <link rel="alternate" type="application/atom+xml" title="Martin" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        Flex 快速布局｜Martin&#39;s blog
+        
+    </title>
+
+    <link rel="canonical" href="http://Jingzhaoliu.github.io/2017/02/08/flex/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('http://img4.imgtn.bdimg.com/it/u=4115680160,3436315572&amp;fm=23&amp;gp=0.jpg')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    Martin
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+                        
+							
+                        <li>
+                            <a href="/tags/">tags</a>
+                        </li>
+							
+						
+                    
+					
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img"
+     src="http://img1.imgtn.bdimg.com/it/u=154212521,2483087198&fm=23&gp=0.jpg">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('http://img1.imgtn.bdimg.com/it/u=154212521,2483087198&fm=23&gp=0.jpg')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>Flex 快速布局</h1>
+                    
+                    <span class="meta">
+                         作者 Martin
+                        <span>
+                          日期 2017-02-08
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/css"
+                           title="css">css</a>
+                        
+                        <a class="tag" href="/tags/移动端"
+                           title="移动端">移动端</a>
+                        
+                        <a class="tag" href="/tags/flex"
+                           title="flex">flex</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            Flex 快速布局
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <h1 id="快速布局神器Flexbox布局"><a href="#快速布局神器Flexbox布局" class="headerlink" title="快速布局神器Flexbox布局"></a>快速布局神器Flexbox布局</h1><p>使用flexbox布局，你需要在父元素flex container上设置display属性</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><div class="line"><span class="selector-class">.flex-container</span> &#123;</div><div class="line">   <span class="attribute">display</span>: flex;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<p>或者你可以把它当行内元素使用<br><figure class="highlight css"><table><tr><td class="code"><pre><div class="line"><span class="selector-class">.flex-container</span> &#123;</div><div class="line">   <span class="attribute">display</span>:inline-flex;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>注意：你给父容器设置了这个属性后，它的子元素都会自动变成flex items。子元素的float、clear和vertical-align属性将失效。</p>
+<h2 id="Flexbox-Container-属性"><a href="#Flexbox-Container-属性" class="headerlink" title="Flexbox Container 属性"></a>Flexbox Container 属性</h2><blockquote>
+<p>flex-direction</p>
+</blockquote>
+<p>这个属性指定了flex items在flex container中是如何布局的。通过设置flex container的主轴的方向，它们会按照两个方向布局，水平的行或者垂直的列。</p>
+<ul>
+<li>row<figure class="highlight css"><table><tr><td class="code"><pre><div class="line"><span class="selector-class">.flex-container</span> &#123;</div><div class="line">  <span class="attribute">flex-direction</span>: row;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>设置为 <code>行</code> ，所有flex items会按照从左到右的顺序排成一行。</p>
+<ul>
+<li>row-reverse<figure class="highlight css"><table><tr><td class="code"><pre><div class="line"><span class="selector-class">.flex-container</span> &#123;</div><div class="line">  <span class="attribute">flex-direction</span>: row-reverse;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>设置为 <code>反转行</code> ，所有flex items会按照从右到左的顺序排成一行。</p>
+<hr>
+<blockquote>
+<p>flex-wrap</p>
+</blockquote>
+<p>默认情况下，项目都排在一条线（又称”轴线”）上。flex-wrap属性定义，如果一条轴线排不下，如何换行。<br><figure class="highlight css"><table><tr><td class="code"><pre><div class="line"><span class="selector-class">.flex-container</span>&#123;</div><div class="line">  <span class="attribute">flex-wrap</span>: nowrap ;</div><div class="line">  <span class="comment">/*nowrap（默认）：不换行*/</span></div><div class="line">   <span class="attribute">flex-wrap</span>:wrap ;</div><div class="line">   <span class="comment">/*wrap：换行，第一行在上方*/</span></div><div class="line">   <span class="attribute">flex-wrap</span>:wrap-reverse;</div><div class="line">   <span class="comment">/*wrap-reverse：换行，第一行在下方*/</span></div><div class="line"> &#125;</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>flex-flow</p>
+</blockquote>
+<p>flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。<br><figure class="highlight css"><table><tr><td class="code"><pre><div class="line"><span class="selector-class">.flex-container</span>&#123;</div><div class="line">  <span class="attribute">flex-flow</span>: column wrap;</div><div class="line"></div><div class="line">  <span class="comment">/*垂直 换行排列*/</span></div><div class="line"> &#125;</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>justify-content</p>
+</blockquote>
+<p>justify-content属性定义了项目在主轴上的对齐方式。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><div class="line"><span class="selector-class">.flex-container</span> &#123;</div><div class="line">    <span class="attribute">justify-content</span>: flex-start ;</div><div class="line">    <span class="comment">/*flex-start（默认值）：左对齐*/</span></div><div class="line">    <span class="attribute">justify-content</span>: flex-end;</div><div class="line">    <span class="comment">/*flex-end：右对齐*/</span></div><div class="line">    <span class="attribute">justify-content</span>: center;</div><div class="line">    <span class="comment">/*center： 居中*/</span></div><div class="line">    <span class="attribute">justify-content</span>: space-between ;</div><div class="line">    <span class="comment">/*space-between：两端对齐，项目之间的间隔都相等。*/</span></div><div class="line">    <span class="attribute">justify-content</span>: space-around;</div><div class="line">    <span class="comment">/*space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。*/</span></div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>align-items</p>
+</blockquote>
+<p>Flex items 会根据当前容器的主轴线对齐，跟justify-content很相似，但是方向垂直。<br>这个属性设置所有flex items默认对齐方式。<br><figure class="highlight css"><table><tr><td class="code"><pre><div class="line"><span class="selector-class">.flex-container</span> &#123;</div><div class="line">  <span class="attribute">align-items</span>: flex-start;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.flex-container</span> &#123;</div><div class="line">  <span class="attribute">align-items</span>: flex-end;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.flex-container</span> &#123;</div><div class="line">  <span class="attribute">align-items</span>: center;</div><div class="line">&#125;</div><div class="line"><span class="comment">/*Flex items会在交叉轴（cross axis）上对齐*/</span></div><div class="line"></div><div class="line"><span class="selector-class">.flex-container</span> &#123;</div><div class="line">  <span class="attribute">align-items</span>: baseline;</div><div class="line">&#125;</div><div class="line"><span class="comment">/*Flex items会按照它们的基线（baselines）对齐*/</span></div><div class="line"></div><div class="line"><span class="selector-class">.flex-container</span> &#123;</div><div class="line">  <span class="attribute">align-items</span>: stretch;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><code>默认值：stretch</code></p>
+<blockquote>
+<p>align-content</p>
+</blockquote>
+<p>align-content属性对齐flex container上的行，控制交叉轴的多余间隔，跟主轴上的justify-content属性很相似。<br><figure class="highlight css"><table><tr><td class="code"><pre><div class="line"><span class="selector-class">.flex-container</span> &#123;</div><div class="line">  <span class="attribute">align-content</span>: stretch;</div><div class="line">&#125;</div><div class="line"><span class="comment">/*每一行Flex items后面都会有区分开的间隔。*/</span></div><div class="line"></div><div class="line"><span class="selector-class">.flex-container</span> &#123;</div><div class="line">   <span class="attribute">align-content</span>: flex-start;</div><div class="line"> &#125;</div><div class="line"><span class="comment">/*Flex items会向交叉轴起始位置靠拢*/</span></div><div class="line"></div><div class="line"><span class="selector-class">.flex-container</span> &#123;</div><div class="line">  <span class="attribute">align-content</span>: flex-end;</div><div class="line">&#125;</div><div class="line"><span class="comment">/*Flex items会向交叉轴的结束位置靠拢*/</span></div><div class="line"></div><div class="line"><span class="selector-class">.flex-container</span> &#123;</div><div class="line">   <span class="attribute">align-content</span>: center;</div><div class="line"> &#125;</div><div class="line"><span class="comment">/*flex items的行会在交叉轴上居中显示*/</span></div><div class="line"></div><div class="line"><span class="selector-class">.flex-container</span> &#123;</div><div class="line">   <span class="attribute">align-content</span>: space-between;</div><div class="line">&#125;</div><div class="line"><span class="comment">/*除了起始和结尾行，flex items的其他行都会有相同的间隔。*/</span></div><div class="line"></div><div class="line"><span class="selector-class">.flex-container</span> &#123;</div><div class="line">   <span class="attribute">align-content</span>: space-around;</div><div class="line">&#125;</div><div class="line"><span class="comment">/*每一行都会有相同上下间隔*/</span></div></pre></td></tr></table></figure></p>
+<p><code>默认值：stretch</code></p>
+<ul>
+<li>注：这个属性只会在flex container有多行的时候才会有效，如果只有一行那么这个属性就不会有效果。</li>
+</ul>
+<blockquote>
+<p>关于flex containers</p>
+</blockquote>
+<p><code>所有的column-*属性在flex container上都不会有效果 ::first-line 与::first-letter伪类在flex container上不会被应用。</code></p>
+<h2 id="Flexbox-items"><a href="#Flexbox-items" class="headerlink" title="Flexbox  items"></a>Flexbox  items</h2><blockquote>
+<p>Order</p>
+</blockquote>
+<p>order属性定义子元素在父容器中的顺序，默认它们会被最加到后面<br><figure class="highlight css"><table><tr><td class="code"><pre><div class="line"><span class="selector-class">.flex-item</span> &#123;</div><div class="line">  <span class="attribute">order</span>:-<span class="number">1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>不需要调整HTML，就能修改显示顺序,默认值:0</p>
+<blockquote>
+<p>flex-grow</p>
+</blockquote>
+<p>这个属性是一个flex拉伸因子，决定了flex items会相对于父容器剩余空间增长多少。<br><figure class="highlight css"><table><tr><td class="code"><pre><div class="line"><span class="selector-class">.flex-item</span> &#123;</div><div class="line">  <span class="attribute">flex-grow</span>:&lt;number&gt;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>如果所有flex items都有相同的flex-grow，那么他们都会在父容器中有相同的尺寸。</p>
+<p><code>默认值：0,负数是不合法的</code>。</p>
+<blockquote>
+<p>flex-shrink</p>
+</blockquote>
+<p>flex-shrink是一个flex收缩因子，它决定了当父容器体积不足时，flex items收缩的相对比例。<br><figure class="highlight css"><table><tr><td class="code"><pre><div class="line"><span class="selector-class">.flex-item</span> &#123;</div><div class="line">  <span class="attribute">flex-shrink</span>:&lt;number&gt;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>默认所有flex items都是可以压缩的，但如果我们把它设为0，那么它将保持原有大小。</p>
+<p><code>默认值： 1 ,负数是不合法的</code>。</p>
+<blockquote>
+<p>flex-basis</p>
+</blockquote>
+<p>这个属性会设置宽度或者高度（根据排列决定宽还是高）</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><div class="line"><span class="selector-class">.flex-item</span> &#123;</div><div class="line">   <span class="attribute">flex-basis</span>:auto|&lt;width&gt;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>flex</p>
+</blockquote>
+<p>这个属性是flex-grow,flex-shrink和flex-basis属性的缩写。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><div class="line"><span class="selector-class">.flex-item</span> &#123;</div><div class="line">  <span class="attribute">flex</span>: none |auto|[&lt;flex-grow&gt;&lt;flex-shrink&gt;?||&lt;flex-basis&gt;];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>默认值：0 1 auto</p>
+</li>
+<li><p>none： none关键字的计算值为: 0 0 auto</p>
+</li>
+</ul>
+<blockquote>
+<p>align-self</p>
+</blockquote>
+<p>这个属性允许为单个flex items重写对齐方式。<br><figure class="highlight css"><table><tr><td class="code"><pre><div class="line"><span class="selector-class">.flex-item</span> &#123;</div><div class="line">  <span class="attribute">align-self</span>:auto| flex-start | flex-end| center | baseline | stretch;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>关于flex items</p>
+</blockquote>
+<p>float,clear，vertical-align在flex item上都不会有作用，也不会让它脱离文档流。</p>
+<h3 id="代码预览"><a href="#代码预览" class="headerlink" title="代码预览"></a><a href="https://codepen.io/jingzhao/pen/ZLMKVJ" target="_blank" rel="external">代码预览</a></h3><h3 id="Github地址"><a href="#Github地址" class="headerlink" title="Github地址"></a><a href="https://github.com/JingzhaoLiu/book/blob/master/flex.md" target="_blank" rel="external">Github地址</a></h3><h3 id="慕课网flex参考预览"><a href="#慕课网flex参考预览" class="headerlink" title="慕课网flex参考预览"></a><a href="http://codepen.io/jingzhao/pen/ygxXBo" target="_blank" rel="external">慕课网flex参考预览</a></h3>
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/2017/01/16/mac/" data-toggle="tooltip" data-placement="top"
+                           title="Mac 快捷键">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#快速布局神器Flexbox布局"><span class="toc-text">快速布局神器Flexbox布局</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Flexbox-Container-属性"><span class="toc-text">Flexbox Container 属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Flexbox-items"><span class="toc-text">Flexbox  items</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#代码预览"><span class="toc-text">代码预览</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Github地址"><span class="toc-text">Github地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#慕课网flex参考预览"><span class="toc-text">慕课网flex参考预览</span></a></li></ol></li></ol></li></ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#css"
+                           title="css">css</a>
+                        
+                        <a class="tag" href="/tags/#移动端"
+                           title="移动端">移动端</a>
+                        
+                        <a class="tag" href="/tags/#flex"
+                           title="flex">flex</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <div style="margin-top: 20px;">
+                    <h5 class="text-center">FRIENDS</h5>
+                    <ul class="list-inline text-center">
+                        
+                        <li><a href="http://www.1991th.com/">耀哥V5</a></li>
+                        
+                        <li><a href="https://github.com/PZJMiao">喵小萌</a></li>
+                        
+                        <li><a href="https://github.com/Pluckypan">耀哥</a></li>
+                        
+                        <li><a href=""></a></li>
+                        
+                        <li><a href=""></a></li>
+                        
+                        <li><a href=""></a></li>
+                        
+                        <li><a href=""></a></li>
+                        
+                        <li><a href=""></a></li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/JingzhaoLiu">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://www.linkedin.com/in/liujingzhao">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Martin 2017
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://Jingzhaoliu.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','null','2.0.0');
+</script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="http://img1.imgtn.bdimg.com/it/u=2438707890,4034501183&amp;fm=21&amp;gp=0.jpg">
+</body>
+
+</html>
