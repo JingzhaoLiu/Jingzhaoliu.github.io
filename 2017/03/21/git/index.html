@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        2017年要做的事情｜Martin&#39;s blog
+        git的简单使用｜Martin&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://Jingzhaoliu.github.io/2017/03/01/do/">
+    <link rel="canonical" href="http://Jingzhaoliu.github.io/2017/03/21/git/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -145,18 +145,18 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>2017年要做的事情</h1>
+                    <h1>git的简单使用</h1>
                     
                     <span class="meta">
                          作者 Martin
                         <span>
-                          日期 2017-03-01
+                          日期 2017-03-21
                          </span>
                     </span>
                     <div class="tags text-center">
                         
-                        <a class="tag" href="/tags/ToDo"
-                           title="ToDo">ToDo</a>
+                        <a class="tag" href="/tags/git"
+                           title="git">git</a>
                         
                     </div>
                 </div>
@@ -165,7 +165,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            2017年要做的事情
+            git的简单使用
         </span>
     </div>
 </header>
@@ -176,21 +176,99 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h1 id="2017年要做的事情"><a href="#2017年要做的事情" class="headerlink" title="2017年要做的事情"></a>2017年要做的事情</h1>
+                <h1 id="git的基本使用"><a href="#git的基本使用" class="headerlink" title="git的基本使用"></a>git的基本使用</h1><p>Git是目前世界上最先进的分布式版本控制系统。</p>
+<blockquote>
+<p>SVN与Git的最主要的区别？</p>
+</blockquote>
+<p>SVN是集中式版本控制系统，版本库是集中放在中央服务器的，而干活的时候，用的都是自己的电脑，所以首先要从中央服务器哪里得到最新的版本，然后干活，干完后，需要把自己做完的活推送到中央服务器。集中式版本控制系统是必须联网才能工作，如果在局域网还可以，带宽够大，速度够快，如果在互联网下，如果网速慢的话，就郁闷了。</p>
+<p>Git是分布式版本控制系统，那么它就没有中央服务器的，每个人的电脑就是一个完整的版本库，这样，工作的时候就不需要联网了，因为版本都是在自己的电脑上。既然每个人的电脑都有一个完整的版本库，那多个人如何协作呢？比如说自己在电脑上改了文件A，其他人也在电脑上改了文件A，这时，你们两之间只需把各自的修改推送给对方，就可以互相看到对方的修改了。</p>
+<h2 id="代码托管"><a href="#代码托管" class="headerlink" title="代码托管"></a>代码托管</h2><ul>
+<li>GitHub <a href="https://github.com/" target="_blank" rel="external">https://github.com/</a></li>
+<li>码云 <a href="https://git.oschina.net/" target="_blank" rel="external">https://git.oschina.net/</a></li>
+<li>CSDN <a href="https://code.csdn.net/" target="_blank" rel="external">https://code.csdn.net/</a></li>
+</ul>
+<h2 id="用户名和邮箱"><a href="#用户名和邮箱" class="headerlink" title="用户名和邮箱"></a>用户名和邮箱</h2><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">git config --global user.name &quot;liujingzhao&quot;</div><div class="line">git config --global user.email &quot;1649541226@qq.com&quot;</div></pre></td></tr></table></figure>
+<p>因为Git是分布式版本控制系统，所以需要填写用户名和邮箱作为一个标识。<br>注意：git config  –global 参数，有了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然你也可以对某个仓库指定的不同的用户名和邮箱。</p>
+<h2 id="生成ssh秘钥"><a href="#生成ssh秘钥" class="headerlink" title="生成ssh秘钥"></a>生成ssh秘钥</h2><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">cd ~/.ssh</div><div class="line">//查看是否有这个文件夹，有就备份删除</div><div class="line"></div><div class="line">ssh-keygen -t rsa -C &quot;1649541226@qq.com&quot;</div></pre></td></tr></table></figure>
+<p>两个Linux机器之间登录使用ssh不需要用户名和密码，ssh秘钥提供一个认证。<br>rsa是数字签名 大写字母C是提供注释，把后面的邮箱添加到生成的文件中。</p>
+<p>按3个回车，密码为空。<br>Your identification has been saved in /home/tekkub/.ssh/id_rsa.</p>
+<p>Your public key has been saved in /home/tekkub/.ssh/id_rsa.pub.</p>
+<p>The key fingerprint is:</p>
+<p>最后得到了两个文件：id_rsa和id_rsa.pub</p>
+<h2 id="git基本操作"><a href="#git基本操作" class="headerlink" title="git基本操作"></a>git基本操作</h2><h3 id="新建仓库（远程项目需要是空的）"><a href="#新建仓库（远程项目需要是空的）" class="headerlink" title="新建仓库（远程项目需要是空的）"></a>新建仓库（远程项目需要是空的）</h3><ul>
+<li>git init</li>
+</ul>
+<p>生成代码仓库</p>
+<ul>
+<li>git add .</li>
+</ul>
+<p>添加所有修改，如果只希望添加一个，可以使用git add 文件名</p>
+<ul>
+<li>git commit -m ‘提交注释’</li>
+</ul>
+<p>提交代码到本地仓库</p>
+<ul>
+<li>git remote add origin 远程url</li>
+</ul>
+<p><code>这个时候需要把公钥放在远程上</code></p>
+<ul>
+<li>git push -u origin master</li>
+</ul>
+<p>第一次需要加-u参数，把本地的分支成为主分支。现在可以在远程上看到代码了</p>
+<h3 id="已有远程仓库"><a href="#已有远程仓库" class="headerlink" title="已有远程仓库"></a>已有远程仓库</h3><ul>
+<li>git clone 远程url<br>远程url使用ssh的不要用https，https需要验证用户名、密码，太费劲。ssh直接用公钥验证。</li>
+<li>git add . &amp;&amp; git commit -m “” &amp;&amp; git pull &amp;&amp; git push origin master</li>
+</ul>
+<h3 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h3><ul>
+<li>git checkout -b dev origin/master<br>新建分支 分支是从远程master主分支上获取</li>
+<li>git checkout 文件路径<br>撤销当前文件的修改<ul>
+<li>add又commit之后撤销修改因为之前已经 add 过了，所以先用如下命令让状态恢复到连 add 也没有过的时候<ul>
+<li>git rm –cached 文件路径</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>git branch -D dev<br>删除分支 必须不在当前分支上才能删除当前分支</li>
+<li>git branch<br>查看分支，git branch -a 查看所有分支</li>
+<li>git merge dev<br>把本地的dev合并到当前分支。git merge origin/dev把远程的dev合并到当前分支。</li>
+<li>git push origin dev<br>把本地代码推送到远程dev分支。</li>
+<li><p>git diff<br>查看文件不同</p>
+<ul>
+<li>git diff 分支 分支 –stat<br>显示不同的文件列表</li>
+<li>git diff 分支 分支 文件路径</li>
+</ul>
+</li>
+<li><p>编辑模式退出<br>shift+q，写内容保存退出 shift+wq</p>
+</li>
+<li>git log<br>查看最近改动</li>
+</ul>
+<ul>
+<li>回到过去： git reset –hard commit_id 或者 HEAD^<pre><code>HEAD是指针 指向当前版本   HEAD^^指向上上个版本  HEAD~10指向上第10个版本
+返回现在： git log 查看提交历史，找到你要的commit_id
+</code></pre>###　其它</li>
+<li>git remote prune origin<br>清理无效分支</li>
+<li>git push origin –delete 分支名<br>删除服务器远端的分支</li>
+</ul>
+<h3 id="图形化工具"><a href="#图形化工具" class="headerlink" title="图形化工具"></a>图形化工具</h3><ul>
+<li>SourceTree</li>
+</ul>
+<h4 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h4><ul>
+<li>所有的版本控制系统，其实只能跟踪文本文件的改动，不能跟踪二进制文件内容的改动，不幸的是，Microsoft的Word格式是二进制格式，因此，版本控制系统是没法跟踪Word文件的改动的</li>
+<li>Git设计优秀主要是因为它跟踪管理的是修改，而非文件，每个文件只有一份，git会根据分支记录的修改去控制工作区中的文件的内容。</li>
+<li>master也是分支，但却是主分支，HEAD指针指向的分支是当前工作的分支，良好的开发方式是新建一个分支(名字可以是dev)进行开发,然后add、commit等，最后再切回master进行merge操作，master分支仅用来发布新版本。</li>
+<li>本地创建的分支如果不推送到远程，对其他人就是不可见的。</li>
+<li>修改文件未提交时切换分支，修改的内容会同步到切换到的分支上，直到提交之后。</li>
+</ul>
+
                 <hr>
                 
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/2017/03/02/stroage/" data-toggle="tooltip" data-placement="top"
-                           title="localstorage、 sessionstorage、 cookie">&larr; Previous Post</a>
-                    </li>
-                    
                     
                     <li class="next">
-                        <a href="/2017/03/01/youbaoshanshanji/" data-toggle="tooltip" data-placement="top"
-                           title="游褒禅山记">Next Post &rarr;</a>
+                        <a href="/2017/03/02/stroage/" data-toggle="tooltip" data-placement="top"
+                           title="localstorage、 sessionstorage、 cookie">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -203,7 +281,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2017年要做的事情"><span class="toc-text">2017年要做的事情</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#git的基本使用"><span class="toc-text">git的基本使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#代码托管"><span class="toc-text">代码托管</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#用户名和邮箱"><span class="toc-text">用户名和邮箱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生成ssh秘钥"><span class="toc-text">生成ssh秘钥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git基本操作"><span class="toc-text">git基本操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#新建仓库（远程项目需要是空的）"><span class="toc-text">新建仓库（远程项目需要是空的）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#已有远程仓库"><span class="toc-text">已有远程仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常用操作"><span class="toc-text">常用操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#图形化工具"><span class="toc-text">图形化工具</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#注意事项："><span class="toc-text">注意事项：</span></a></li></ol></li></ol></li></ol></li></ol>
                 </div>
             </div>
         </div>
@@ -225,8 +303,8 @@
                     </h5>
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/#ToDo"
-                           title="ToDo">ToDo</a>
+                        <a class="tag" href="/tags/#git"
+                           title="git">git</a>
                         
                     </div>
                 </section>
