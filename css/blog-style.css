@@ -192,6 +192,7 @@ article blockquote footer{
 .post-container ul,
 .post-container ol {
     margin-bottom: 20px;
+    padding-left: 45px;
 }
 
 @media screen and (max-width: 768px) {
