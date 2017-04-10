@@ -183,7 +183,7 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">git config --global user.name &quot;name（可以是英文名可以是名字拼音）&quot;</div><div class="line">git config --global user.email &quot;email&quot;</div></pre></td></tr></table></figure>
 <p>我在这里输入的是：<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">git config --global user.name &quot;liujingzhao&quot;</div><div class="line">git config --global user.email &quot;1649541226@qq.com&quot;</div></pre></td></tr></table></figure></p>
 <p>注意：git config  –global 参数，有了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然你也可以对某个仓库指定的不同的用户名和邮箱。</p>
-<h2 id="生成ssh秘钥"><a href="#生成ssh秘钥" class="headerlink" title="生成ssh秘钥"></a>生成ssh秘钥</h2><p>我们平时使用的软件有用户名有密码，在这里git我们使用秘钥，两个Linux机器之间登录使用ssh不需要用户名和密码，ssh秘钥提供一个认证。</p>
+<h2 id="生成ssh秘钥"><a href="#生成ssh秘钥" class="headerlink" title="生成ssh秘钥"></a>生成ssh秘钥</h2><p>我们平时使用的软件有用户名有密码，在这里我们使用秘钥，两个Linux机器之间登录使用ssh不需要密码，ssh秘钥在其中担当认证的作用。</p>
 <p>在命令行输入：<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;1649541226@qq.com（上面你填写过的邮箱）&quot;</div></pre></td></tr></table></figure></p>
 <p>这句话中的rsa是数字签名，大写字母C是提供注释，把后面的邮箱添加到生成的文件中。</p>
 <p>之后按3个回车，密码为空。<br>Your identification has been saved in /home/tekkub/.ssh/id_rsa.</p>
