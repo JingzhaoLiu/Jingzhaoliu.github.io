@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="刘景照在 Github 上的个人博客">
+    <meta name="keyword" content="学习,成长,编程">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="http://octej3ir4.bkt.clouddn.com/u=877666951,3769873751&fm=23&gp=0.jpg">
+    <link rel="alternate" type="application/atom+xml" title="刘景照" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        为什么要学会编程｜刘景照的博客
+        
+    </title>
+
+    <link rel="canonical" href="http://Jingzhaoliu.github.io/2017/07/03/xuehuibiancheng/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('http://octej3ir4.bkt.clouddn.com/u=4115680160,3436315572&amp;fm=23&amp;gp=0.jpg')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    刘景照
+                </span>
+                的博客
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+                        
+							
+                        <li>
+                            <a href="/tags/">tags</a>
+                        </li>
+							
+						
+                    
+
+            <!-- about显示 -->
+						<li>
+							<a href="/2017/04/11/about">About</a>
+						</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img"
+     src="http://octej3ir4.bkt.clouddn.com/u=154212521,2483087198&fm=23&gp=0.jpg">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('http://octej3ir4.bkt.clouddn.com/u=154212521,2483087198&fm=23&gp=0.jpg')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>为什么要学会编程</h1>
+                    
+                    <span class="meta">
+                         作者 刘景照
+                        <span>
+                          日期 2017-07-03
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            为什么要学会编程
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <p><img src="http://upload-images.jianshu.io/upload_images/3003409-381431e6d2e7414e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="code.org"></p>
+<p>最近“人人编程”的概念特别火，尤其是code.org推广的“编程一小时”项目得到了苹果、谷歌、微软、亚马逊等科技巨头的支持，<br>旨在向全球青少年推广编程教育，学习计算机科学，通过创建简单应用和游戏更好的理解日常所使用的科技。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3003409-f72c4c2290508a9f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="奥巴马学习编程"></p>
+<p>引人关注的是，美国前总统奥巴马致辞:编程会成为未来<code>人人应该掌握的基本技能</code>，即便不能精通掌握，也要大致了解，学生要从小<code>培养编程思维</code>。并且亲自写了一段简单地计算机代码，成为了美国历史上第一位会写代码的总统，亲自践行“人人都要学编程”的口号。</p>
+<p>其实不仅有code.org的参与，美国已经有很多厂商看到了孩子学习编程的重要性以及商机，茄葩早前也盘点过“小孩玩了能变成下一个扎克伯格的七款应用”。可见，学习编程真的要从娃娃抓起。</p>
+<p>中国家长分分钟现身，“编程一小时”渗入到了中国10余所中小学、45余所高校，300余所乡村学校及60余家微软社区青年中心在内的数百所学校及教育组织，近6万名学生参与活动中。</p>
+<p>除了这些，各种幼儿游戏模块编程纷纷出现。</p>
+<p>甚至2017年起，中国浙江等地将把信息技术（含编程）正式升级为高考项目。可见编程的重要性已经得到了广泛的认识</p>
+<h2 id="提高效率，做懒人"><a href="#提高效率，做懒人" class="headerlink" title="提高效率，做懒人"></a>提高效率，做懒人</h2><p>今天的社会是计算机的时代，人工智能、虚拟现实各种新的技术即将为我们提供服务。当然对我们的生活和工作会带来翻天覆地的变化，<br>很多工作会被替代，以后编程会像今天我们做ppt一样每个人都要会，可以预见我们用编程控制机器为我们更好的工作的时代不远了。</p>
+<p>人的性格中有惰性，但是机器不会，机器最喜欢干的就是重复无聊的工作，它们可以数百万甚至数十亿次连续做相同的事情，还不会觉得无聊，两次以上重复的事情就用机器来干好了，<code>人生苦短，我用编程</code>,<br>人可以从无聊枯燥没有积极性的工作抽身出来，发挥自己真正的价值：创造性、创新性、艺术性。充分发挥自己的思考能力，来更好的为世界创造价值。</p>
+<h2 id="编程带来乐趣"><a href="#编程带来乐趣" class="headerlink" title="编程带来乐趣"></a>编程带来乐趣</h2><p>现在人们用在看小说、玩游戏等娱乐项目上的时间越来越多了，但是有时焦虑、无聊、迷茫会突然而来。有人说：人要把自己的时间花在美好的事物上。编程是美好的事物之一。<br>你编程的时候，会沉迷其中：为了解决某个问题而冥思苦想，解决问题后能给你带来无法用语言表达的成就感。学习了知识，解决了问题，还有成就感，世界上这样的好事不多吧。</p>
+<h2 id="培养思考方式"><a href="#培养思考方式" class="headerlink" title="培养思考方式"></a>培养思考方式</h2><p>在这里要声明一下，学习编程不是为了去学某一门机器语言，不要盲目的为了编程而编程，我们最重要的是来学习计算机科学，其实不理解计算机科学的思维方式也学不好编程。<br>这里有两点需要注意：</p>
+<ol>
+<li><p>计算机科学是一种新的思维方式。它的基本理念对于身处在科技社会的每个人来说都非常受用。</p>
+</li>
+<li><p>编程是学计算机科学的一种方式，并不是最终的目的。</p>
+</li>
+</ol>
+<p>我们是通过学习编程来培养思考方式。让自己的思维方式更加多样。这个社会不会再缺少廉价的劳动力，也不会再有简单重复无意义的工作，多样的思维，完善的思考方式才是适应这个变化社会的有效手段。</p>
+<p>感觉本站内容不错，读后有收获？快点关注并分享给你的朋友吧。<br><img src="http://upload-images.jianshu.io/upload_images/3003409-0c6d5dadb4fc0c2d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>​</p>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2017/07/03/xuehaobianchengyuyan/" data-toggle="tooltip" data-placement="top"
+                           title="如何较快的学好一门编程语言">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2017/05/10/daxue/" data-toggle="tooltip" data-placement="top"
+                           title="大学">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#提高效率，做懒人"><span class="toc-text">提高效率，做懒人</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编程带来乐趣"><span class="toc-text">编程带来乐趣</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#培养思考方式"><span class="toc-text">培养思考方式</span></a></li></ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <div style="margin-top: 20px;">
+                    <h5 class="text-center">FRIENDS</h5>
+                    <ul class="list-inline text-center">
+                        
+                        <li><a href="http://www.1991th.com/">耀哥V5</a></li>
+                        
+                        <li><a href="https://github.com/PZJMiao">喵小萌</a></li>
+                        
+                        <li><a href="https://github.com/Pluckypan">耀哥</a></li>
+                        
+                        <li><a href="http://skyrim.me/">刘杰</a></li>
+                        
+                        <li><a href=""></a></li>
+                        
+                        <li><a href=""></a></li>
+                        
+                        <li><a href=""></a></li>
+                        
+                        <li><a href=""></a></li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/JingzhaoLiu">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://www.linkedin.com/in/liujingzhao">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; 刘景照 2017
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://Jingzhaoliu.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','null','2.0.0');
+</script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="http://octej3ir4.bkt.clouddn.com/u=2727143792,2979345420&amp;fm=11&amp;gp=0.jpg">
+</body>
+
+</html>
